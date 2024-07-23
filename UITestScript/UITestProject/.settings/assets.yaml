@@ -1,0 +1,79 @@
+name: UITestProject
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /UITestProject/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+  - name: Datasets
+    resources: 
+  - name: 'JMeter Tests'
+    resources: 
+  - name: Locations
+    resources: 
+  - name: Results
+    resources: 
+      - name: UITestnew_1721754640050.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1721754640050
+          tags: 
+          testId: A1EF49166A1F0260DB2CB43662646632
+          testName: UITestnew
+        dependencies: 
+          - path: /UITestProject/Results/UITestnew_1721754640050.xmoebreport
+            type: statsSessionAsset
+          - path: /UITestProject/Results/UITestnew_1721754640050_orch!system.mstats
+            type: statsSessionStore
+          - path: /UITestProject/Results/UITestnew_1721754640050_orch!system.rstats
+            type: statsSessionStore
+          - path: /UITestProject/Results/UITestnew_1721754640050_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /UITestProject/Results/UITestnew_1721754640050_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /UITestProject/Results/UITestnew_1721754640926.executiondlr
+            type: statsSessionAsset
+          - path: /UITestProject/Tests/UITestnew.testsuite
+            type: statsSessionTest
+      - name: UITestnew_1721754640050.xmoebreport
+      - name: UITestnew_1721754640050_orch!system.mstats
+      - name: UITestnew_1721754640050_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: UITestnew_1721754640050_perf!localhost.mstats
+      - name: UITestnew_1721754640050_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: UITestnew_1721754640926.executiondlr
+  - name: Schedules
+    resources: 
+  - name: Tests
+    resources: 
+      - name: UITestnew.recdata
+      - name: UITestnew.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /UITestProject/Tests/UITestnew.recdata
+            type: recsessionRecdata
+      - name: UITestnew.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.2.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EF49166A1F0260DB2CB43662646632
+        dependencies: 
+          - path: /UITestProject/Tests/UITestnew.recsession
+            type: testRecsession
+          - path: /UITestProject/pectran_com_5e8.ma
+            type: test#moeb.applicationPackage
+  - name: pectran_com_5e8.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: UITestnew_Test_A1EF49166A1F0260DB2CB43662646632.java
+            type: com.ibm.rational.test.lt.generatedCode
